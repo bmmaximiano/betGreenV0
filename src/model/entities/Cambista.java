@@ -5,19 +5,18 @@ import java.util.List;
 
 public class Cambista extends Employ{
 	private int gerenteId;
-	private List<Apostador>apostadores = new ArrayList<>();
+	
 	public int getGerenteId() {
 		return gerenteId;
 	}
 	public void setGerenteId(int gerenteId) {
 		this.gerenteId = gerenteId;
 	}
-	public List<Apostador> getApostadores() {
-		return apostadores;
+	@Override
+	public String toString() {
+		return String.format("%d; %s, %d", super.getId(), super.getName(), getGerenteId());
 	}
-	public void setApostadores(List<Apostador> apostadores) {
-		this.apostadores = apostadores;
-	}
+	
 	
 	
 }
